@@ -1,0 +1,28 @@
+footer.footer
+    .container
+        .left-footer-container
+            a(href="index.html").container-logo
+                img(src="images/logo.png", alt="logo").logo
+            ul.footer-navigation-list
+                - var menu = ['Footwear', 'clothing', 'accessories', 'brands', 'clearance']
+                    each item in menu
+                        li.footer-navigation__item
+                            a(href="#").footer-navigation__link= item
+            ul.footer-navigation-list
+                - var menu = ['About', 'Contact us', 'Support', 'Store locator', 'Press room']
+                    each item in menu
+                        li.footer-navigation__item
+                            a(href="#").footer-navigation__link= item
+            ul.footer-navigation-list
+                - var menu = ['Website Terms', 'Select Country', 'Source Code']
+                    each item in menu
+                        li.footer-navigation__item
+                            a(href="#").footer-navigation__link= item
+        .right-footerr-container
+            ul.social-list
+                -var social = ['youtube', 'insta', 'twitter', 'facebook', 'pinterest']
+                    each item in social
+                        li.social__item
+                            a(href="#" class="social__link_#{item}").social__link= item
+            .mail Suscribe our newsletter...
+    .copy Copyright &copy; 2015 Bree Orthonormai. All rights reserved.
