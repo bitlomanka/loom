@@ -73,13 +73,6 @@ html, body {
     font-family: $font-family;
 }
 
-.background_product{
-    background: #f2f9fd;
-}
-
-.background_home{
-    background: #c8cfdc;
-}
 
 .wrapper{
     display: table;
@@ -100,6 +93,36 @@ html, body {
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+}
+
+
+.section__title{
+    color: #606060;
+    font: 800 16px $font-family;
+    text-transform: uppercase;
+    max-width: 243px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    &:before{
+        content: '';
+        width: 82px;
+        height: 0;
+        border-bottom: 1px solid #e1e1e1;
+        position: absolute;
+        top: 50%;
+        left:-82px;
+    }
+    &:after{
+        content: '';
+        width: 82px;
+        height: 0;
+        border-bottom: 1px solid #e1e1e1;
+        position: absolute;
+        top: 50%;
+        right: -82px;
+    }
 }
 
 
