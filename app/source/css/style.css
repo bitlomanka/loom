@@ -339,11 +339,16 @@ html, body {
 .parallax__container {
   margin: 0 0 75px 0;
   background-size: cover;
+  position: relative;
 }
 
 .block-parallax {
   padding: 76px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 20;
 }
 .block-parallax .section__title {
   color: #d0d0d0;
@@ -426,7 +431,7 @@ parallax-process__text {
 }
 
 .recent-projects__item {
-  width: 31.7%;
+  width: 31.6%;
   margin: 0 0 0 2.5%;
 }
 .recent-projects__item:first-child {
@@ -472,12 +477,20 @@ parallax-process__text {
   font: 500 14px/25px "Raleway";
 }
 
+.block-slide {
+  position: relative;
+  padding: 76px 0;
+}
+
 .slider_bg {
   background: url(../images/slider-bg.png) no-repeat center;
   width: 100%;
   height: 329px;
   overflow: hidden;
   margin: 0 0 80px;
+}
+.slider_bg .section__title {
+  color: #fff;
 }
 .slider_bg .owl-buttons {
   display: none;

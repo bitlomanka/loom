@@ -21,10 +21,9 @@ $(document).ready(function(){
     });
     
     
-    
     $('.img-holder').imageScroll({
         holderMinHeight: 405,
-        holderMaxHeight: 500,
+        holderMaxHeight: 405,
         speed: 0.3
     });
     

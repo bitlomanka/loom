@@ -1,11 +1,16 @@
 .parallax__container{
     margin: 0 0 75px 0;
     background-size: cover;
+    position: relative;
 }
 
 .block-parallax{
     padding: 76px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 20;
     .section__title{
         color: #d0d0d0;
     }
