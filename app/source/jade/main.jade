@@ -11,18 +11,19 @@ html
     link(rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon")
     //build:css css/bundle.min.css
     link(href="css/lib/normalize.css" rel="stylesheet")
-    link(rel="stylesheet", href="bower/select2/dist/css/select2.min.css")
-    link(rel="stylesheet", href="fonts/stylesheet.css")
+    link(href="https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,700,800", rel="stylesheet", type="text/css")
+    link(rel="stylesheet", href="bower/OwlCarousel/owl-carousel/owl.carousel.css")
     link(rel="stylesheet", href="css/style.css")
     //endbuild
-    body(class="" + (typeof(bodyBg) != 'undefined' ? 'background_#{bodyBg}' : ''))
+    body
         .wrapper
-            .container(class="" + (typeof(background) != 'undefined' ? ' #{background}' : ''))
-                include _common/_header
+            include _common/_header
+            .container
             block content
             include _common/_footer
     //build:js js/main.js
     script(src="bower/jquery/dist/jquery.min.js")
-    script(src="bower/select2/dist/js/select2.min.js")
+    script(src="bower/OwlCarousel/owl-carousel/owl.carousel.js")
+    script(src="bower/Parallax-ImageScroll/jquery.imageScroll.min.js")
     script(src="js/main.js")
     //endbuild

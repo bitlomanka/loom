@@ -1,0 +1,53 @@
+.recent-projects__list{
+    @extend %letter-spacing;
+    width: 100%;
+    margin: 0 0 70px;
+}
+
+.recent-projects__item{
+    @extend %inline-block;
+    width: 31.7%;
+    margin: 0 0 0 2.5%;
+    &:first-child{
+        margin: 0;
+    }
+}
+
+.recent-projects__link{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.recent-projects__cintainer-img{
+    width: 100%;
+    padding: 67% 0 0 0;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 19px;
+}
+
+.recent-projects__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recent-projects__title{
+    color: #606060;
+    font: 800 15px $font-family;
+    margin: 0 0 7px;
+    text-transform: uppercase;
+}
+
+.recent-projects__section{
+    margin: 0 0 14px; 
+    color: #1abb9c;
+    font: 500 12px $font-family;
+}
+
+.recent-projects__description{
+    color: #7a7a7a;
+    font: 500 14px/25px $font-family;
+}

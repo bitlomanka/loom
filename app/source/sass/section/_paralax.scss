@@ -1,0 +1,84 @@
+.parallax__container{
+    margin: 0 0 75px 0;
+    background-size: cover;
+}
+
+.block-parallax{
+    padding: 76px 0;
+    width: 100%;
+    .section__title{
+        color: #d0d0d0;
+    }
+}
+
+.imageHolder{
+    height: 405px;
+}
+
+.parallax__text{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto 20px auto;
+    color: #d0d0d0;
+    font: 500 14px/25px $font-family;
+}
+
+.parallax-process__list{
+    @extend %letter-spacing;
+    width: 100%;
+}
+
+.parallax-process__item{
+    text-align: center;
+    @extend %inline-block;
+    width: 11.7%;
+    position: relative;
+    margin: 0 0 0 16%;
+    &:before{
+        content: '';
+        width: 141%;
+        height: 0;
+        border-bottom: 1px solid #e1e1e1;
+        position: absolute;
+        top: 50%;
+        left: -141%;
+    }
+    &:first-child{
+        margin: 0;
+
+    }
+}
+
+.parallax-process__bg{
+    width: 94px;
+    height: 94px;
+    border: 2px solid #1abb9c;
+    border-radius: 50%;
+    margin: 0 auto 18px auto;
+}
+
+@import "process-icons/*.png";
+
+.parallax-process__bg_1{
+    background-color: #1abb9c;
+    @include process-icons-sprite(process-icons-1)
+}
+
+.parallax-process__bg_2{
+    @include process-icons-sprite(process-icons-2)
+}
+
+.parallax-process__bg_3{
+    @include process-icons-sprite(process-icons-3)
+}
+
+.parallax-process__bg_4{
+    @include process-icons-sprite(process-icons-4)
+}
+
+
+parallax-process__text{
+    text-transform: uppercase;
+    color: #fff;
+    font: 800 14px $font-family;
+}

@@ -1,106 +1,77 @@
 .footer{
-    background: #0c0d0d;
+    background: #373737;
     overflow: hidden;
-    .container{
-        padding: 40px 50px 0 60px;
-    }
+    padding: 69px 0 0 0;
 }
 
-.left-footer-container{
-    float: left;
-    width: 65%;
-    margin: 0 0 67px;
+.footer-sections__list{
+    width: 100%;
     @extend %letter-spacing;
+    margin: 0 0 10px;
 }
 
-.footer-navigation-list{
-    margin: 0 0 0 6.5%;
+.footer-sections__item{
     @extend %inline-block;
+    width: 22%;
+    color: #cacaca;
+    margin: 0 0 0 4%;
     &:first-child{
-        margin: 0 0 0 7%;
+        margin: 0;
     }
 }
 
-.footer-navigation__item{
+.footer-sections__link{
+    display: block;
+    font: 700 14px $font-family;
+    color: #f0f0f0;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+}
+
+.footer-sections__text{
+    font: 500 14px/24px $font-family;
+    color: #cacaca;
+    margin: 0 0 20px;
+    display: block;
+}
+
+.footer-sections__contact {
+    display: block;
+    padding: 0 0 0 25px;
+    font: 500 14px/14px $font-family;
+    color: #cacaca;
+    margin: 0 0 10px;
+}
+
+$contact-spacing: 40px;
+
+@import "contact/*.png";
+
+
+
+.footer-sections__contact_address {
+    @include contact-sprite(adress);
+}
+
+.footer-sections__contact_call {
+    @include contact-sprite(phone);
+}
+
+.footer-sections__contact_mail {
+    @include contact-sprite(mail);
+}
+
+.footer-sections__date-container{
     
 }
 
-.footer-navigation__link{
-    display: block;
-    color: #666666;
-    text-transform: uppercase;
-    padding: 7px;
-    font: 14px $font-family;
-}
-
-.right-footerr-container{
-    float: right;
-    margin: 0 0 60px;
-}
-
-.social-list{
-    @extend %letter-spacing;
-    margin: 0 0 30px;
-}
-
-.social__item{
-    margin: 0 0 0 10px;
-    @extend %inline-block;
-    &:first-child{
-        margin: 0;   
-    }
-}
-
-.social__link{
-    display: block;
-    width: 48px;
-    height: 48px;
-    border: 1px solid #252626;
-    @extend %text-indent;
-}
-
-@import "socials/*.png";
-
-.social__link_youtube {
-    @include socials-sprite(yt);
-}
-
-.social__link_insta {
-    @include socials-sprite(in);
-}
-
-.social__link_twitter {
-    @include socials-sprite(tw);
-}
-
-.social__link_facebook {
-    @include socials-sprite(fb);
-}
-
-.social__link_pinterest {
-    @include socials-sprite(p);
-}
-
-.mail{
-    color: #666666;
-    position: relative;
-    padding: 0 0 15px 40px;
-    border-bottom: 2px solid #252626;
-    font: 14px 'robotolight';
-    &:after{
-        content: '';
-        position: absolute;
-        top: -16px;
-        left: -15px;
-        width: 36px;
-        height: 32px;
-        @include socials-sprite(mail); 
-    }
+.copy__bg{
+    background: #333;
+    padding: 30px 0;
 }
 
 .copy{
     color: #666666;
-    text-align: center;
-    margin: 0 0 33px;
-    font: 12px 'robotolight';
+    font: 500 14px/14px $font-family;
+    color: #cacaca;
 }

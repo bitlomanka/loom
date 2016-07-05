@@ -1,0 +1,75 @@
+.intro__container{
+    color: #606060;
+    margin: 0 0 64px;
+}
+
+.intro__title{
+    font: 800 35px $font-family;
+    margin: 0 0 9px;
+}
+
+.intro__text{
+    font: 300 25px $font-family;
+}
+
+.container-slider{
+    margin: 0 auto 75px auto;
+    width: 100%;
+    height: 550px;
+}
+
+.slider__item{
+    width: 100%;
+}
+
+.slider__link{
+    display: block;
+}
+
+.slider__img{
+}
+
+.slider__container-text{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 10;
+    color: #606060;
+}
+
+.slider__text-1, .slider__text-2{
+    background: #fcfbf9;
+    padding: 13px 20px;
+    margin: 0 0 3px;
+}
+
+.slider__text-1{
+    text-transform: uppercase;
+    font: 500 20px $font-family;
+}
+
+.slider__text-2{
+    font: 500 16px $font-family;
+}
+
+.active{
+    color: #1abb9c;
+}
+
+.owl-prev, .owl-next{
+    height: 45px;
+    width: 45px;
+    background: #fdfdfd url(../images/arrow.png) no-repeat center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.owl-prev{
+    left: 20px;
+}
+
+.owl-next{
+    transform: translateY(-50%) rotate(180deg);
+    right: 20px;
+}

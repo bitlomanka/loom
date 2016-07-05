@@ -1,0 +1,94 @@
+.service-section__container{
+    
+}
+
+.section__title{
+    color: #606060;
+    font: 800 16px $font-family;
+    text-transform: uppercase;
+    max-width: 270px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    &:before{
+        content: '';
+        width: 82px;
+        height: 0;
+        border-bottom: 1px solid #e1e1e1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    &:after{
+        content: '';
+        width: 82px;
+        height: 0;
+        border-bottom: 1px solid #e1e1e1;
+        position: absolute;
+        top: 50%;
+        right: 0;
+    }
+}
+
+.service-section__list{
+    @extend %letter-spacing;
+    margin: 0 0 81px -2%;
+    width: 100%;
+}
+
+.service-section__item{
+    @extend %inline-block;
+    width: 23%;
+    height: 310px;
+    padding: 54px 1.8%;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    box-shadow:inset 0 0 0 3px #fff, inset 0 0 0 4px #e1e1e1;
+    margin: 0 0 0 2%;
+    overflow: hidden;
+}
+
+.service-section__bg{
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 27px auto;
+    overflow: hidden;
+}
+
+$contact-spacing: 20px;
+
+@import "service/*.png";
+
+.service-section__bg_1{
+    @include service-sprite(service-1)
+}
+
+.service-section__bg_2{
+    @include service-sprite(service-2)
+}
+
+.service-section__bg_3{
+    @include service-sprite(service-3)
+}
+
+.service-section__bg_4{
+    @include service-sprite(service-4)
+}
+
+.service-section__title{
+    font: 800 15px $font-family;
+    text-align: center;
+    color: #606060;
+    margin: 0 0 11px;
+    text-transform: uppercase;
+}
+
+.service-section__text{
+    font: 500 14px/24px $font-family;
+    color: #7a7a7a;
+    text-align: center;
+    height: 90px;
+    overflow: hidden;
+    word-wrap: break-word;
+}

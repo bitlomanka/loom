@@ -1,8 +1,13 @@
 extends ../main
-block vars
-    - var bodyBg = "product"
 block title
     | loom
 block content
     main.content
+        .container
+            include ../_common/_slider
+            include ../_common/_service-section
+        include ../_common/_paralax
+        include ../_common/_recent-projects
+        include ../_common/_slider-2
+        include ../_common/_journal
         

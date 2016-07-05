@@ -1,28 +1,47 @@
 footer.footer
     .container
-        .left-footer-container
-            a(href="index.html").container-logo
-                img(src="images/logo.png", alt="logo").logo
-            ul.footer-navigation-list
-                - var menu = ['Footwear', 'clothing', 'accessories', 'brands', 'clearance']
-                    each item in menu
-                        li.footer-navigation__item
-                            a(href="#").footer-navigation__link= item
-            ul.footer-navigation-list
-                - var menu = ['About', 'Contact us', 'Support', 'Store locator', 'Press room']
-                    each item in menu
-                        li.footer-navigation__item
-                            a(href="#").footer-navigation__link= item
-            ul.footer-navigation-list
-                - var menu = ['Website Terms', 'Select Country', 'Source Code']
-                    each item in menu
-                        li.footer-navigation__item
-                            a(href="#").footer-navigation__link= item
-        .right-footerr-container
-            ul.social-list
-                -var social = ['youtube', 'insta', 'twitter', 'facebook', 'pinterest']
-                    each item in social
-                        li.social__item
-                            a(href="#" class="social__link_#{item}").social__link= item
-            .mail Suscribe our newsletter...
-    .copy Copyright &copy; 2015 Bree Orthonormai. All rights reserved.
+        ul.footer-sections__list
+                li.footer-sections__item
+                    a(href="#").footer-sections__link Get In Touch
+                    .footer-sections__text
+                        | Fusce dapibus, tellus commodo, tortor mauris condimentum utellus fermentum, porta sem malesuada magna.
+                    .footer-sections__contact.footer-sections__contact_address Moonshine Street No: 14/05 Light City, Jupiter
+                    a(href="tel:02475416587").footer-sections__contact.footer-sections__contact_call 0247 541 65 87
+                    a(href="mailto:support@longwave.com").footer-sections__contact.footer-sections__contact_mail support@longwave.com
+                li.footer-sections__item
+                    a(href="#").footer-sections__link Twitter
+                    a(href="#").footer-sections__text
+                        | Aenean lacinia bibendum nulla sed leo posuere erat a ante venenatis dapibus posuere velit aliquet.
+                    a(href="#").footer-sections__text
+                        | Donec ullamcorper metus auctor fringilla. Nullam quis risus eget.
+                    a(href="#").footer-sections__text
+                        | Vestibulum id ligula porta  euismod semper. Maecenas faucibus mollis
+                li.footer-sections__item
+                    a(href="#").footer-sections__link Popular Posts
+                    a(href="#").footer-sections__text
+                        | Vivamus sagittis lacus vel augue laoreet rutrum dolor auctor.
+                        .footer-sections__date-container
+                            span.footer-sections__date_number 14 
+                            span.footer-sections__date_month Nov, 
+                            span.footer-sections__date_year 2012 
+                    a(href="#").footer-sections__text
+                        | Donec ullamcorper metus auctor fringilla. Nullam quis risus eget.
+                        .footer-sections__date-container
+                            span.footer-sections__date_number 22 
+                            span.footer-sections__date_month May, 
+                            span.footer-sections__date_year 2012 
+                    a(href="#").footer-sections__text
+                        | Vestibulum id ligula porta  euismod semper. Maecenas faucibus mollis
+                        .footer-sections__date-container
+                            span.footer-sections__date_number 15 
+                            span.footer-sections__date_month July, 
+                            span.footer-sections__date_year 2012
+                li.footer-sections__item
+                    a(href="#").footer-sections__link Twitter
+                    .footer-sections__text
+                        | Vestibulum id ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+                    .footer-sections__text
+                        | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus curabitur
+    .copy__bg
+        .container
+            .copy &copy; 2013 Loom. All rights reserved. Theme by elemis.
