@@ -7,16 +7,22 @@
 .footer-sections__list{
     width: 100%;
     @extend %letter-spacing;
-    margin: 0 0 10px;
+    margin: 0 0 10px -4%;
 }
 
 .footer-sections__item{
     @extend %inline-block;
-    width: 22%;
+    width: 21%;
     color: #cacaca;
     margin: 0 0 0 4%;
-    &:first-child{
-        margin: 0;
+    word-wrap: break-word;
+    @include media("max-width: 960px") {
+        width: 46%;
+        margin-bottom: 40px;
+    }
+    @include media("max-width: 480px") {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
@@ -26,6 +32,9 @@
     color: #f0f0f0;
     text-transform: uppercase;
     margin: 0 0 16px;
+    @include media("max-width: 960px") {
+        text-align: center;
+    }
 }
 
 .footer-sections__text{
@@ -74,4 +83,7 @@ $contact-spacing: 40px;
     color: #666666;
     font: 500 14px/14px $font-family;
     color: #cacaca;
+    @include media("max-width: 960px") {
+        text-align: center;
+    }
 }

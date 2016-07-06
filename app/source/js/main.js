@@ -27,6 +27,17 @@ $(document).ready(function(){
         speed: 0.3
     });
     
+    $('.mobile-navigation').on("click", function(e){
+        e.stopPropagation();
+        var menu = $('.navigation__list');
+        
+        if(menu.is(":hidden")){
+            menu.slideDown(400);
+        }else{
+            menu.slideUp(400);
+        }
+    });
+    
     
 });
 

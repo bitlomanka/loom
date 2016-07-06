@@ -76,6 +76,7 @@ html, body {
 
 .wrapper{
     display: table;
+    table-layout: fixed;
     height: 100%;
     width: 100%;
     position: relative;
@@ -88,10 +89,11 @@ html, body {
 }
 
 .container{
-    max-width: 1170px;
+    padding: 0 20px;
+    max-width: 1210px;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow: hidden;
+    @extend %clearfix;
     position: relative;
 }
 
@@ -113,6 +115,9 @@ html, body {
         position: absolute;
         top: 50%;
         left:-82px;
+        @include media("max-width: 480px") {
+            display: none;
+        }
     }
     &:after{
         content: '';
@@ -122,6 +127,9 @@ html, body {
         position: absolute;
         top: 50%;
         right: -82px;
+        @include media("max-width: 480px") {
+            display: none;
+        }
     }
 }
 

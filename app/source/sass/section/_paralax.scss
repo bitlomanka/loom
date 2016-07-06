@@ -14,6 +14,15 @@
     .section__title{
         color: #d0d0d0;
     }
+    @include media("max-width: 960px") {
+        padding: 50px 0;
+    }
+    @include media("max-width: 700px") {
+            padding: 100px 0;
+        }
+    @include media("max-width: 480px") {
+        padding: 70px 0;
+    }
 }
 
 .imageHolder{
@@ -26,11 +35,22 @@
     margin: 0 auto 20px auto;
     color: #d0d0d0;
     font: 500 14px/25px $font-family;
+    @include media("max-width: 960px") {
+        width: 90%;
+    }
 }
 
 .parallax-process__list{
     @extend %letter-spacing;
-    width: 100%;
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    @include media("max-width: 960px") {
+        width: 100%;
+    }
+    @include media("max-width: 700px") {
+        display: none;
+    }
 }
 
 .parallax-process__item{
@@ -38,19 +58,29 @@
     @extend %inline-block;
     width: 11.7%;
     position: relative;
-    margin: 0 0 0 16%;
+    margin: 0 0 0 17.7%;
+    @include media("max-width: 960px") {
+        width: 16%;
+        margin: 0 0 0 11%;
+    }
     &:before{
         content: '';
         width: 141%;
         height: 0;
         border-bottom: 1px solid #e1e1e1;
         position: absolute;
-        top: 50%;
+        top: 48px;
         left: -141%;
+        @include media("max-width: 960px") {
+            width: 55%;
+            left: -60%;
+        }
     }
     &:first-child{
         margin: 0;
-
+        &:before{
+            display: none;
+        }
     }
 }
 
@@ -60,6 +90,7 @@
     border: 2px solid #1abb9c;
     border-radius: 50%;
     margin: 0 auto 18px auto;
+    overflow: hidden;
 }
 
 @import "process-icons/*.png";

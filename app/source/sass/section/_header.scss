@@ -1,9 +1,10 @@
 .header{
     border-top: 3px solid #414141;
-    overflow: hidden;
+    @extend %clearfix;
     background: #f5f5f5;
     padding: 25px 0;
     margin: 0 0 70px;
+    position: relative;
 }
 
 .container-logo{
@@ -23,11 +24,37 @@
     float: right;
     @extend %letter-spacing;
     padding: 20px 0 0 0;
+    display: block;
+    @include media("max-width: 700px") {
+        display: none;
+        float: none;
+        position: absolute;
+        top: 40px;
+        right: 19px;
+        background: #414141;
+        padding: 5px 0;
+        z-index: 2;
+        &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 7px solid #414141;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            position: absolute;
+            top: -7px;
+            right: 11px;
+        }
+    }
 }
 
 .navigation__item{
     @extend %inline-block;
     margin: 0 0 0 46px;
+    @include media("max-width: 700px") {
+        display: block;
+        margin: 0;
+    }
 }
 
 .navigation__link{
@@ -35,9 +62,25 @@
     color: #606060;
     text-transform: uppercase;
     font: 800 13px $font-family;
+    @include media("max-width: 700px") {
+        color: #fff;
+        padding: 13px 40px;
+    }
 }
 
 .navigation__link_active{
     color: $active-color;
+}
+
+.mobile-navigation{
+    display: none;
+    width: 40px;
+    height: 30px;
+    float: right;
+    background: url(../images/mob.png) no-repeat center;
+    cursor: pointer;
+    @include media("max-width: 700px") {
+        display: block;
+    }
 }
 

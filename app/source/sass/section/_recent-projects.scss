@@ -1,15 +1,20 @@
 .recent-projects__list{
     @extend %letter-spacing;
     width: 100%;
-    margin: 0 0 70px;
+    margin: 0 0 70px -1.5%;
 }
 
 .recent-projects__item{
     @extend %inline-block;
     width: 31.6%;
-    margin: 0 0 0 2.5%;
-    &:first-child{
-        margin: 0;
+    margin: 0 0 0 1.5%;
+     @include media("max-width: 700px") {
+        display: block;
+        width: 80%;
+        margin: 0 auto 30px auto;
+    }
+    @include media("max-width: 480px") {
+        width: 100%;
     }
 }
 
@@ -32,6 +37,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
 }
 
 .recent-projects__title{
@@ -39,6 +46,9 @@
     font: 800 15px $font-family;
     margin: 0 0 7px;
     text-transform: uppercase;
+    @include media("max-width: 960px") {
+        font-size: 15px;
+    }
 }
 
 .recent-projects__section{

@@ -1,6 +1,12 @@
 .block-slide{
     position: relative;
     padding: 76px 0;
+    @include media("max-width: 480px") {
+        padding: 20px 0;
+    }
+    @include media("max-width: 700px") {
+        padding: 50px 0;
+    }
 }
 
 .slider_bg{
@@ -21,6 +27,12 @@
         left: 50%;
         transform: translate(-50%);
         @extend %letter-spacing;
+        @include media("max-width: 700px") {
+            bottom: 0px;
+        }
+        @include media("max-width: 480px") {
+            bottom: -18px;
+        }
     }
     .owl-page.active{
         border: 1px solid #fff;
@@ -39,6 +51,9 @@
     color: #d8d8d8;
     text-align: center;
     margin: 0 0 25px;
+    @include media("max-width: 700px") {
+        font: 300 18px/20px $font-family;
+    }
 }
 
 .slider__signature{

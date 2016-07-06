@@ -6,6 +6,9 @@
     @extend %letter-spacing;
     margin: 0 0 81px -2%;
     width: 100%;
+    @include media("max-width: 480px") {
+        margin: 0;
+    }
 }
 
 .service-section__item{
@@ -18,6 +21,15 @@
     box-shadow:inset 0 0 0 3px #fff, inset 0 0 0 4px #e1e1e1;
     margin: 0 0 0 2%;
     overflow: hidden;
+    @include media("max-width: 700px") {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    @include media("max-width: 480px") {
+        display: block;
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
 }
 
 .service-section__bg{
@@ -62,4 +74,7 @@ $contact-spacing: 20px;
     height: 90px;
     overflow: hidden;
     word-wrap: break-word;
+    @include media("max-width: 480px") {
+        padding: 0 10px;
+    }
 }
